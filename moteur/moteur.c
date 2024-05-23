@@ -99,7 +99,11 @@ int main(int argc, char ** argv)
 		printf0("Nombre impair : on ajoute un joueur baptisé 'exempt'\n");
 		addJoueur(0,"exempt", ATTEND); // souci lié au pid : si on kill 0, souci ! 
 	}
-
+	if (joueurs.nb == 0)
+	{
+		return 0;
+	}
+	
 	initTournoi();
 
 	printf("------------------------------ Tournoi -------------------------------\n");
